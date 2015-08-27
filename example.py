@@ -36,9 +36,7 @@ def corrupt(message, numErrors, minVal=0, maxVal=131):
 
 
 def tkamTest():
-   message = '''When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh. He couldn't have cared less, so long as he could pass and punt.
-
-When enough years had gone by to enable us to look back on them, we sometimes discussed the events leading to his accident. I maintain that the Ewells started it all, but Jem, who was four years my senior, said it started long before that. He said it began the summer Dill came to us, when Dill first gave us the idea of making Boo Radley come out.'''
+   message = '''When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh. He couldn't have cared less, so long as he could pass and punt.'''
 
    k = len(message)
    n = len(message) * 2
@@ -57,7 +55,7 @@ When enough years had gone by to enable us to look back on them, we sometimes di
    Q,E = solveSystem(corrupted)
    P, remainder = (Q.__divmod__(E))
 
-   recovered = [chr(x) for x in P.coefficients]
+   recovered = ''.join([chr(x) for x in P.coefficients])
    print(recovered)
 
 tkamTest()
