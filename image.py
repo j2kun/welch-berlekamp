@@ -3,7 +3,7 @@
 import numpy
 from scipy import misc
 from scipy import ndimage
-from reedsolomon import makeEncoderDecoder
+from welchberlekamp import makeEncoderDecoder
 import random
 
 def corruptImage(message, numErrors):

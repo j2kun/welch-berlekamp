@@ -1,5 +1,5 @@
 
-from reedsolomon import makeEncoderDecoder
+from welchberlekamp import makeEncoderDecoder
 import random
 
 def simpleTest():
